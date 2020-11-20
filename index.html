@@ -9,17 +9,40 @@
   </head>
   <body>
 
-    <div id="root">
+    <div class="container">
+      <div id="root">
 
-      <ul v-if="mailArrayReady">
-        <li
-        v-for="(mail, index) in mailArray"
-        >
-          {{mail}}
-        </li>
-      </ul>
+        <img id="logo" src="logo.png" alt="">
 
+        <h2>
+          I finalisti per l'edizione 2020 random Boolean sono...
+        </h2>
+        <h2>oooooooo:</h2>
+
+        <ul id="mail-list" v-if="mailArray.length == 10">
+          <li
+          v-for="(mail, index) in mailArray"
+          >
+          <div class="box-mail">
+
+            <p>{{index}}  {{mail}}</p>
+
+          </div>
+
+          </li>
+        </ul>
+
+        <h2>
+          Il vincitore della lotteria Boolean è:
+        </h2>
+
+        <div v-if="mailArray.length == 10" class="box-mail">
+          <p>{{randomMail()}}</p>
+        </div>
+
+      </div>
     </div>
+
 
 
 

@@ -12,7 +12,13 @@ var app = new Vue({
    },
 
    methods: {
+     randomMail() {
+       let winner = this.mailArray[Math.floor(Math.random() * this.mailArray.length)];
 
+       return winner;
+
+       console.log(winner);
+     }
    },
 
    mounted() {
@@ -23,11 +29,13 @@ var app = new Vue({
 
           this.mailArray.push(response.data.response);
 
-          if (this.mailArray.length == 10) {
+          // Soluzione per metter meno logica nell'HTML
 
-            this.mailArrayReady = true;
-
-          }
+          // if (this.mailArray.length == 10) {
+          //
+          //   this.mailArrayReady = true;
+          //
+          // }
       });
      }
 
