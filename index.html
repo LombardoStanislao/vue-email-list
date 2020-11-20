@@ -11,10 +11,10 @@
 
     <div id="root">
 
-      <ul>
+      <ul v-if="mailArrayReady">
         <li
         v-for="(mail, index) in mailArray"
-        v-if="getReady">
+        >
           {{mail}}
         </li>
       </ul>

@@ -8,7 +8,7 @@ var app = new Vue({
 
    data: {
      mailArray: [],
-     getReady: false,
+     mailArrayReady: false,
    },
 
    methods: {
@@ -23,12 +23,15 @@ var app = new Vue({
 
           this.mailArray.push(response.data.response);
 
-          if (i=10) {
-            this.getReady = true;
+          if (this.mailArray.length == 10) {
+
+            this.mailArrayReady = true;
 
           }
       });
      }
+
+
 
 
 
