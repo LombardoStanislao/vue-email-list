@@ -12,7 +12,9 @@
     <div id="root">
 
       <ul>
-        <li v-for="(mail, index) in mailArray">
+        <li
+        v-for="(mail, index) in mailArray"
+        v-if="getReady">
           {{mail}}
         </li>
       </ul>
