@@ -10,7 +10,7 @@
   <body>
 
     <div class="container">
-      <div id="root">
+      <div id="root" v-if="mailArray.length == 10">
 
         <img id="logo" src="logo.png" alt="">
 
@@ -39,6 +39,10 @@
         <div v-if="mailArray.length == 10" class="box-mail">
           <p>{{randomMail()}}</p>
         </div>
+
+        <h2>
+          COMPLIMENTI! HAI VINTO UN SERVIZIO DI PIATTI... DI PLASTICA
+        </h2>
 
       </div>
     </div>
